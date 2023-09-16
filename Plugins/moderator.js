@@ -392,7 +392,7 @@ module.exports = {
           );
         }
         const botNames = [
-          "Atlas MD",
+          "Hinata",
           "Power",
           "Makima",
           "Denji",
@@ -400,7 +400,7 @@ module.exports = {
           "Chika",
           "Miku",
           "Marin",
-          "Ayanokoji",
+          "Nami",
           "Ruka",
           "Mizuhara",
           "Rem",
@@ -414,7 +414,7 @@ module.exports = {
           "Eiko",
         ];
         const botLogos = [
-          "https://wallpapercave.com/wp/wp5924545.jpg",
+          "https://i.imgur.com/VhpMdxv.jpg",
           "https://wallpapercave.com/wp/wp11253614.jpg",
           "https://images5.alphacoders.com/126/1264439.jpg",
           "https://i0.wp.com/metagalaxia.com.br/wp-content/uploads/2022/11/Chainsaw-Man-Denji-e-Power.webp?resize=1068%2C601&ssl=1",
@@ -422,7 +422,7 @@ module.exports = {
           "https://images4.alphacoders.com/100/1002134.png",
           "https://wallpapercave.com/wp/wp10524580.jpg",
           "https://images2.alphacoders.com/125/1257915.jpg",
-          "https://wallpapers.com/images/file/kiyotaka-ayanokoji-in-pink-qs33qgqm79ccsq7n.jpg",
+          "https://w0.peakpx.com/wallpaper/855/522/HD-wallpaper-nami-anime-one-piece-manga.jpg",
           "https://wallpapercave.com/wp/wp8228630.jpg",
           "https://images3.alphacoders.com/128/1288059.png",
           "https://images.alphacoders.com/711/711900.png",
