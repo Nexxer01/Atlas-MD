@@ -41,23 +41,21 @@ module.exports = {
           repo.license.name
         }\n*📁 Repo Size:* ${(repo.size / 1024).toFixed(
           2
-        )} MB\n*📅 Last Updated:* ${repo.updated_at}\n\n*🔗 Repo Link:* ${
-          repo.html_url
-        }\n\n❝ Dont forget to give a Star ⭐ to the repo. It's made with restless hardwork by *Team ATLAS*. ❞\n\n*©️ Team ATLAS- 2023*`;
+        )} MB\n*📅 Last Updated:* ${repo.updated_at}\n\n`;
         Atlas.sendMessage(m.from, { image: pic, caption: txt }, { quoted: m });
         break;
 
       case "support":
       case "supportgc":
         await doReact("🔰");
-        let txt2 = `              🧣 *Support Group* 🧣\n\n*${botName}* is an open source project, and we are always happy to help you.\n\n*Link:* ${suppL}\n\n*Note:* Please don't spam in the group, and don't message *Admins directly* without permission. Ask for help inside *Group*.\n\n*Thanks for using Atlas.*`;
+        let txt2 = `ㅤ   ㅤ  🧣 *Owner Group* 🧣\n\n*${botName}* is an bot modified by Nexxer Sama, and we are always happy to help you.\n\n*Link:* chat.whatsapp.com/DF3fnIHbFxWEY3bqUAf7Is\n\n*Note:* Please don't spam in the group, and don't message *Admins directly* without permission. Ask for help inside *Group*.\n\n*Thanks for using ${botName}*`;
         Atlas.sendMessage(m.from, { image: pic, caption: txt2 }, { quoted: m });
         break;
 
       case "help":
       case "h":
       case "menu":
-        await doReact("☃️");
+        await doReact("⚡");
         await Atlas.sendPresenceUpdate("composing", m.from);
         function readUniqueCommands(dirPath) {
           const allCommands = [];
@@ -92,10 +90,13 @@ module.exports = {
               file.replace(".js", "").charAt(0).toUpperCase() +
               file.replace(".js", "").slice(1);
 
-            formatted += `╟   🏮 *${capitalizedFile}* 🏮   ╢\n\n`;
+            formatted += `┎┈┈┈❮ 🧣 *${capitalizedFile}* 🧣 ❯┈┈┈⟢\n`;
+            //formatted += `\`\`\`${commands.join("\n")}\`\`\`\n\n\n`;
+            // Adding a - before each command
             formatted += `\`\`\`${commands
-              .map((cmd) => `⥼   ${prefix + cmd}`)
-              .join("\n")}\`\`\`\n\n\n`;
+              .map((cmd) => `┊✗   ${prefix + cmd}`)                   
+              .join("\n")}\`\`\`\n`;
+            formatted +=  `┕┈┈┈┈┈┈┄┄┄┄┄┄┄┄┄┄⟢\n\n`;
           }
 
           return formatted.trim();
@@ -105,7 +106,20 @@ module.exports = {
 
         const allCommands = readUniqueCommands(pluginsDir);
         const formattedCommands = formatCommands(allCommands);
-        var helpText = `\nKonnichiwa *${pushName}* Senpai,\n\nI am *${botName}*, a WhatsApp bot built to take your boring WhatsApp experience into next level.\n\n*🔖 My Prefix is:*  ${prefix}\n\n${formattedCommands}\n\n\n*©️ Team ATLAS- 2023*`;
+        var helpText = `\nKonnichiwa *${pushName}* Senpai,\n\nI am *${botName}*, a WhatsApp bot built to take your boring WhatsApp experience into next level.\n\n*🔖 My Prefix is:*  *${prefix}*
+
+🎗 *Here's My List Of Cammands:*\n\n${formattedCommands}\n\n\n
+𝟶ཻུ۪۪ꦽꦼ̷⸙‹•══════════════ 〄
+│
+│ *🔰  ${botName}  🔰*
+│ _Powered By:_ *Ɲᴇꪎꪎᴇʀ  ꢺᴀϻᴀ 𓆩×͜×𓆪ꪾ*
+│
+│🎀 To use any of these commands type 
+│ " *${prefix}Command name* ".
+│
+│🏮 To get Owner number " *${prefix}Mods* ".
+│
+╰═════ꪶ ཻུ۪۪ꦽꦼ̷⸙ ━ ━ ━ ━ ꪶ ཻུ۪۪ꦽꦼ̷⸙`;
         await Atlas.sendMessage(
           m.from,
           { video: { url: botVideo }, gifPlayback: true, caption: helpText },
