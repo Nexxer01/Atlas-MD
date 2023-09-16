@@ -213,7 +213,7 @@ module.exports = async (Atlas, m, commands, chatUpdate) => {
         `*${budy.replace(
           prefix,
           ""
-        )}* - Command not found or plug-in not installed !\n\nIf you want to see the list of commands, type:    *_${prefix}help_*\n\nOr type:  *_${prefix}pluginlist_* to see installable plug-in list.`
+        )}* - Command not found, type *${prefix}help* to see the list of commands.`
       );
     }
 
@@ -223,6 +223,8 @@ module.exports = async (Atlas, m, commands, chatUpdate) => {
         return;
       } else if (budy.includes(`https://chat.whatsapp`)) {
         const bvl = `\`\`\`「  Antilink System  」\`\`\`\n\n*⚠️ Group link detected !*\n\n*🚫 You are not allowed to send group links in this group !*\n`;
+        const kice = m.sender;
+        await Atlas.groupParticipantsUpdate(m.from, [kice], "remove");
         await Atlas.sendMessage(
           from,
           {
@@ -308,7 +310,7 @@ module.exports = async (Atlas, m, commands, chatUpdate) => {
     };
     const uptime = () => formatTime(process.uptime());
 
-    let upTxt = `〘  ${botName} Personal Edition  〙    ⚡ Uptime: ${uptime()}`;
+    let upTxt = ``;
     Atlas.setStatus(upTxt);
 
     cmd.start(Atlas, m, {
