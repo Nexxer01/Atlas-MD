@@ -400,7 +400,7 @@ module.exports = {
         }
         await doReact("👋");
         await Atlas.sendMessage(m.from, {
-          image: { url: "https://wallpapercave.com/wp/wp9667218.png" },
+          image: { url: "https://i.imgur.com/BtWBySB.jpg" },
           caption: `I'm Leaving this group on request... \n\nTake care everyone :)`,
           mentions: participants.map((a) => a.id),
           quoted: m,
@@ -698,7 +698,7 @@ module.exports = {
           message2 = "Check this Out !";
         }
 
-        let mess = `            『 *Attention Everybody* 』
+        let mess = `     -----»⟩ ᴀᴛᴛᴇɴᴛɪᴏɴ ʜᴇʀᴇ ⟨«-----
     
 *⚜️ Tagged by:* @${m.sender.split("@")[0]}
             
