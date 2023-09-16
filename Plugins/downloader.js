@@ -46,7 +46,7 @@ module.exports = {
             m.from,
             {
               video: { url: scrappedURL },
-              caption: `Downloaded by: *${botName}* \n\n_*🎀 Powered by:*_ *Scrappy API - by FantoX*\n\n_*🧩 Url:*_ https://github.com/FantoX001/Scrappy-API \n`,
+              caption: `Downloaded by: *${botName}* \n\n_*🎀 Powered by:*_ *Nᥱꪎꪎᥱʀ  ꢺᴀϻᴀ妥*\n`,
             },
             { quoted: m }
           );
@@ -126,7 +126,7 @@ Downloading...`;
             m.from,
             {
               video: { url: scrappedURL },
-              caption: `Downloaded by: *${botName}* \n\n_*🎀 Powered by:*_ *Scrappy API - by FantoX*\n\n_*🧩 Url:*_ https://github.com/FantoX001/Scrappy-API \n`,
+              caption: `Downloaded by: *${botName}* \n\n_*🎀 Powered by:*_ Nᥱꪎꪎᥱʀ  ꢺᴀϻᴀ妥`,
             },
             { quoted: m }
           );
